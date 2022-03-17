@@ -1,0 +1,12 @@
+Monte Carlo: clean explanation of Confidence Intervals
+
+Monte Carlo: simple parallelization in Python
+
+clean code: vim configuration, pylint, pyunit
+
+Efficient Python: numexpr, numba cuda
+
+Efficient Python: cpu profiling, memory profiling
+
+Potential project: navier-stokes solver in numba, following Griebel book
+
