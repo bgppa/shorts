@@ -5,24 +5,25 @@
 \usepackage{algorithmic}
 \usepackage{mathtools}
 \usepackage{graphicx}
+\usepackage{listings}
 
-\title {template}
-\author {me}
-
+\title {On code quality from a maintenance viewpoint}
 \begin{document}
-
 \maketitle
+
+
 \begin{section}{Configuring vim}
-The following configuration in .vimrc is minimalistic and pragmatic:
+The attached configuration in .vimrc is minimalistic and pragmatic:
 
-
+\begin{lstlisting}
 :imap jj <Esc>
 set expandtab ts=4 sw=4 ai
+\end{lstlisting}
 
 
 The command imap replaces the use of the esc key with a double pressing of j.
-Expandtab convers tab spaces in N blank spaces, while ts=4 set this N equal
-to 4. The autoindention is given by ai with a witdh of value sw=4.
+Expandtab converts tab spaces in N blank spaces, while ts=4 set this N equal
+to 4. The auto-indention is given by ai with a width of value sw=4.
 Typing :retab ensures to replace
 the tabs with whitespaces in the current (previously created) file.
 \end{section}
@@ -30,29 +31,30 @@ the tabs with whitespaces in the current (previously created) file.
 
 \begin{section}{Pylint and Pytest}
 Writing clean code is essential: not only from an algorithmic viewpoint 
-(performance), but also regarding readability (maintenance).
+(performance), but also w.r.t. readability (maintenance).
 
 
-The use of pylint gives a good insight concerning the quality of the code
-w.r.t. this last criteria, and its use is traighforward: just type
-'pylint pythonfile.py' and you'll get an output of suggestions.
+The use of pylint gives a good insight on your code readability quality,
+and its straightforward use via \emph{pylint pythonfile.py}
+prints on screen always interesting suggestions.
 
 
-Every time you implement a new function, in principle you should also
-write a test to check that this function works (up to some reasonable level)
-as expected. For example you can test against some trivial conditions, easy
-cases or extremal values on which the code has an easy-to-compute
-behavior. Writint tests can seem at a first sight time consuming, but it is
-very convenient in the long run. Everytime you modify some parts of your code,
+Speaking again about maintenance, every time you implement a new function, 
+in principle you should also
+write a test to check that this function works as expected 
+(up to some reasonable level).
+For example you can test against some trivial conditions, easy
+cases or extreme values on which the code has a known output.
+Writing tests can seem to be time consuming, but it is
+very convenient in the long run: every time you modify some parts of your code,
 if the tests are still successful, you have some chance to believe you didn't
 damage your work.
 
 
-In python you can use pytest. Running pyunit on a script will just run
+In python you can use pytest. Running it on a script will just run
 all functions whose name start with the word 'test' followed by an underscore.
 Remember that each function of such a kind should end with an assert condition.
-
-
+See the attached code for a minimalistic example.
 \end{section}
 
 
