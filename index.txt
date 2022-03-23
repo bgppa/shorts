@@ -10,3 +10,14 @@ Efficient Python: cpu profiling, memory profiling
 
 Potential project: navier-stokes solver in numba, following Griebel book
 
+Model simplification using a Neural Network (Deep hedging)
+
+MMD distance, detecting regime change using Wasserstein
+
+Crypto trading as a way to concretely validate new models
+
+Rough Volatility models (KEY: non-markovians)
+
+FPGA Programming VS CUDA Programming (Eurex)
+
+Stochastic Volatility Models
