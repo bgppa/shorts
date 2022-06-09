@@ -1,11 +1,16 @@
-\documentclass[10pt]{article}
+\documentclass[9pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{mathtools}
 \usepackage{graphicx}
-\usepackage{listings}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 
 % if you want to reduce the space from the top
 %\usepackage[scale=0.75,top=1cm]{geometry} 
