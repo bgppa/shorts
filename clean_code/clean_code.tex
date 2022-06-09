@@ -11,11 +11,13 @@
 The attached configuration in .vimrc is minimalistic and pragmatic:
 
 
-:imap jj <Esc>
+:imap jj $<$Esc$>$
+
+
 set expandtab ts=4 sw=4 ai
 
 
-\emph{imap} replaces esc with a double pressing of j.
+The word \emph{imap} replaces esc with a double pressing of j.
 \emph{Expandtab} converts tabs in N blank spaces, ts=4 set N=4.
 \emph{ai} is auto-indention with width sw=4.
 Typing :retab replaces the current tabs
